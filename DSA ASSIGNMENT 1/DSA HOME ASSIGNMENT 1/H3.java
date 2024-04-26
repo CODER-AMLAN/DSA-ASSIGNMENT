@@ -31,6 +31,6 @@ class H3{
         for (int k=0;k<n;k++) {
             System.out.print(c[k]+" ");
         }
-        sc.close();
+        sc.close();//optional
     }
 }
