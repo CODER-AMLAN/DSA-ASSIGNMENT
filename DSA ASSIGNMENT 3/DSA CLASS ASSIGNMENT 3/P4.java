@@ -40,7 +40,7 @@ public class P4{
 
         // Change the contents of one and determine the effect on the other.
         intBoxRef1.set(123);
-        System.out.println("integerBoxRef2 contents: " + intBoxRef2.get());
+        System.out.println("intBoxRef2 contents: " + intBoxRef2.get());
 
         // Create a boxed Object object and two variables that refer to that box.
         Box<Object> objectBox = new Box<>();
