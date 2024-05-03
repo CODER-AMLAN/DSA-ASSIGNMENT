@@ -9,53 +9,49 @@ contents of one and determine the effect on the other.
 happens if you put a string in the box. Determine what happens if you put an integer in
 the box.*/
 
-class Box<T>{
-    T var;//variable of type T
-    Box(T var){
-       this.var = var;
-    }
-    void displayBeforeChange(){
-        System.out.println(var);
-    }
-    void displayAfterChange(){
-        System.out.println(var+"\n");
+class Box<T> {
+    T var;// variable of type T
+
+     void set(T var){
+        this.var = var;
+     }
+
+    public T get() {
+        return var;
     }
 }
-class P4{
-    
+
+public class P4{
     public static void main(String[] args) {
-        //Create a boxed String object and two variables that refer to that box.
-        Box<String> stringOb = new Box<>("Hello");
-        Box<String> stringRef1 = stringOb;
-        Box<String> stringRef2 = stringOb;
+        // Create a boxed String object and two variables that refer to that box.
+        Box<String> stringBox = new Box<>();
+        Box<String> stringBoxRef1 = stringBox;
+        Box<String> stringBoxRef2 = stringBox;
+
         // Change the contents of one and determine the effect on the other.
-        System.out.print("stringRef1 contents before change: ");
-        stringRef1.displayBeforeChange();
-        System.out.print("stringRef1 contents after change: ");
-        stringRef1 = new Box<>("World");
-        stringRef1.displayAfterChange();
-        
-        //Create a boxed Integer object and two variables that refer to that box.
-        Box<Integer> intOb = new Box<>(123);
-        Box<Integer> intRef1 = intOb;
-        Box<Integer> intRef2 = intOb;
+        stringBoxRef1.set("Hello");
+        System.out.println("stringBoxRef2 contents: " + stringBoxRef2.get());
+
+        // Create a boxed Integer object and two variables that refer to that box.
+        Box<Integer> intBox = new Box<>();
+        Box<Integer> intBoxRef1 = integerBox;
+        Box<Integer> intBoxRef2 = integerBox;
+
         // Change the contents of one and determine the effect on the other.
-        System.out.print("intRef1 contents before change: ");
-        intRef1.displayBeforeChange();
-        System.out.print("intRef1 contents after change: ");
-        intRef1 = new Box<>(321);
-        intRef1.displayAfterChange();
- 
-        //Create a boxed String object and two variables that refer to that box.
-        Box<Object> objectOb = new Box<>("Hello");
-        Box<Object> objectRef1 = objectOb;
-        Box<Object> objectRef2 = objectOb;
-        // Change the contents of one and determine the effect on the other.
-        System.out.print("objectRef1 contents before change: ");
-        objectRef1.displayBeforeChange();
-        System.out.print("objectRef1 contents after change: ");
-        objectRef1 = new Box<>(123);
-        objectRef1.displayAfterChange();
- 
+        intBoxRef1.set(123);
+        System.out.println("intBoxRef2 contents: " + intBoxRef2.get());
+
+        // Create a boxed Object object and two variables that refer to that box.
+        Box<Object> objectBox = new Box<>();
+        Box<Object> objectBoxRef1 = objectBox;
+        Box<Object> objectBoxRef2 = objectBox;
+
+        // Determine what happens if you put a string in the box.
+        objectBoxRef1.set("Hello");
+        System.out.println("objectBoxRef2 contents: " + objectBoxRef2.get());
+
+        // Determine what happens if you put an integer in the box.
+        objectBoxRef1.set(123);
+        System.out.println("objectBoxRef2 contents: " + objectBoxRef2.get());
     }
 }
