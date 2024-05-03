@@ -1,4 +1,5 @@
-/*Write a simple main class in Java that contains an experiment that uses the generic Box<T>
+/*Question 4
+Write a simple main class in Java that contains an experiment that uses the generic Box<T>
 class to build boxes with different types and that verifies that this class works as advertised.
 Your experiment should include the following:
  Create a boxed String object and two variables that refer to that box. Change the contents
