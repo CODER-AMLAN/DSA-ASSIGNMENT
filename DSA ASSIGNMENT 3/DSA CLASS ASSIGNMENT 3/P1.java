@@ -18,6 +18,6 @@ class P1{
         catch(NumberFormatException e){
             System.out.println(e.getMessage());
         }
-        sc.close();
+        sc.close();//OPTIONAL
     }
 }
