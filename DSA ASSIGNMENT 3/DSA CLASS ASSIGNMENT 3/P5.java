@@ -5,8 +5,8 @@ signature of printArray method is given below
 */
 public class P5{
     public static <E> void print_array(E[] inputArray){
-            for(int i=0;i<inputArray.length;i++)
-                System.out.print(inputArray[i]+" ");
+            for(E element: inputArray)
+                System.out.print(element+" ");
             System.out.println();
     } 
     public static void main(String[] args) {
