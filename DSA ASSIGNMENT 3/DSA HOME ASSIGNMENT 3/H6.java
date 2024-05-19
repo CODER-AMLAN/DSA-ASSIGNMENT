@@ -22,5 +22,4 @@ public class H6 {
 	          else
 	             System.out.println("Not a Palindrome.");
 	}
-}
-//WILL BE UPLOADED SOON... 
+}
