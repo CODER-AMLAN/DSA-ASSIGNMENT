@@ -27,19 +27,19 @@ public class Deposit {
         totalAmt = (principal*rate*time)/100.0;
     }
     void display(){
-        System.out.print(principal+"\t");
+        System.out.print(principal+"\t\t");
         System.out.print(rate+"\t");
         System.out.print(time+"\t");
         System.out.print(totalAmt+"\t");
         System.out.println();
-    
+
     }
     public static void main(String[] args) {
         Deposit ob1 = new Deposit();
         Deposit ob2 = new Deposit(1001,2, 11);
         Deposit ob3 = new Deposit(1200,1);
         Deposit ob4 = new Deposit(1300,10.1);
-System.out.println("Principal \t Rate \t Time\t Total Amount");
+    System.out.println("Principal\tRate\tTime\tTotal Amount");
         ob1.calcAmt();
         ob1.display();
         ob2.calcAmt();
