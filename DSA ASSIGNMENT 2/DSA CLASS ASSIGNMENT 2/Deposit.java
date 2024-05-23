@@ -39,6 +39,7 @@ public class Deposit {
         Deposit ob2 = new Deposit(1001,2, 11);
         Deposit ob3 = new Deposit(1200,1);
         Deposit ob4 = new Deposit(1300,10.1);
+System.out.println("Principal \t Rate \t Time\t Total Amount");
         ob1.calcAmt();
         ob1.display();
         ob2.calcAmt();
