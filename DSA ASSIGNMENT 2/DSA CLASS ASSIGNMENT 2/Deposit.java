@@ -24,7 +24,7 @@ public class Deposit {
         time = 2;
     }
     void calcAmt(){
-        totalAmt = (principal*rate*time)/100;
+        totalAmt = (principal*rate*time)/100.0;
     }
     void display(){
         System.out.print(principal+"\t");
